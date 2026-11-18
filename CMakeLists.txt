@@ -56,4 +56,13 @@ if(BUILD_TESTING)
 
     add_test(NAME unit COMMAND test_unit)
     add_test(NAME integration COMMAND test_integration)
+
+    add_executable(test_median_extra tests/test_median_extra.cpp)
+    target_link_libraries(test_median_extra PRIVATE arraylib)
+    if(MSVC)
+        target_compile_options(test_median_extra PRIVATE /UNDEBUG)
+    else()
+        target_compile_options(test_median_extra PRIVATE -UNDEBUG)
+    endif()
+    add_test(NAME median_extra COMMAND test_median_extra)
 endif()
