@@ -17,7 +17,7 @@ ldd build/app
 ```
 
 CMake создает `build/libarraylib.so` и `build/libarraylib.a` на Linux, а также
-`build/app`, `build/variant_07` и два тестовых исполняемых файла. На Windows
+`build/app`, `build/variant_07` и три тестовых исполняемых файла. На Windows
 динамическая библиотека имеет расширение `.dll`, статическая — `.lib`.
 
 ## Что делает библиотека
